@@ -1,6 +1,6 @@
 FROM maven:3.9.9-eclipse-temurin-21-jammy AS BUILD_IMAGE
 RUN git clone https://github.com/ajaiji/terralogic_project.git
-RUN cd terralogic_project && RUN git checkout main && RUN mvn install 
+RUN cd terralogic_project && git checkout main && mvn install 
 
 
 FROM tomcat:10-jdk21
